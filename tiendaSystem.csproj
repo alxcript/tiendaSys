@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{992BAC43-4AF0-4E4B-A85F-81C01338F416}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>tiendaSystem</RootNamespace>
+    <AssemblyName>tiendaSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controllers\ClienteController.cs" />
+    <Compile Include="controllers\Conexion.cs" />
+    <Compile Include="controllers\MySqlCommandHelper.cs" />
+    <Compile Include="controllers\NotaIngresoController.cs" />
+    <Compile Include="controllers\NotaVentaController.cs" />
+    <Compile Include="controllers\NumeracionComprobanteController.cs" />
+    <Compile Include="controllers\ProductosController.cs" />
+    <Compile Include="controllers\ProveedorController.cs" />
+    <Compile Include="models\Cliente.cs" />
+    <Compile Include="models\EntityValidator.cs" />
+    <Compile Include="models\NotaIngresoDetalleHistorial.cs" />
+    <Compile Include="models\NotaIngresoHistorial.cs" />
+    <Compile Include="models\NotaVenta.cs" />
+    <Compile Include="models\NotaVentaDetalle.cs" />
+    <Compile Include="models\NumeracionComprobante.cs" />
+    <Compile Include="models\Producto.cs" />
+    <Compile Include="models\Proveedor.cs" />
+    <Compile Include="views\ClientesCoincidentesDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ClientesCoincidentesDialogForm.Designer.cs">
+      <DependentUpon>ClientesCoincidentesDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ComprobanteVentaAbstractoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\ComprobanteVentaAbstractoPanel.Designer.cs">
+      <DependentUpon>ComprobanteVentaAbstractoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ComprobanteVentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ComprobanteVentaForm.Designer.cs">
+      <DependentUpon>ComprobanteVentaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\InformacionProductoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\InformacionProductoPanel.Designer.cs">
+      <DependentUpon>InformacionProductoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\MDITienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\MDITienda.Designer.cs">
+      <DependentUpon>MDITienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\NotaIngresoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NotaIngresoForm.Designer.cs">
+      <DependentUpon>NotaIngresoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NotaVentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NotaVentaForm.Designer.cs">
+      <DependentUpon>NotaVentaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NuevoProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NuevoProductoForm.Designer.cs">
+      <DependentUpon>NuevoProductoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ProductosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ProductosForm.Designer.cs">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ProveedoresCoincidentesDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ProveedoresCoincidentesDialogForm.Designer.cs">
+      <DependentUpon>ProveedoresCoincidentesDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\SeleccionarProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SeleccionarProductoForm.Designer.cs">
+      <DependentUpon>SeleccionarProductoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TotalesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\TotalesPanel.Designer.cs">
+      <DependentUpon>TotalesPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\ClientesCoincidentesDialogForm.resx">
+      <DependentUpon>ClientesCoincidentesDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ComprobanteVentaAbstractoPanel.resx">
+      <DependentUpon>ComprobanteVentaAbstractoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ComprobanteVentaForm.resx">
+      <DependentUpon>ComprobanteVentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\InformacionProductoPanel.resx">
+      <DependentUpon>InformacionProductoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\MDITienda.resx">
+      <DependentUpon>MDITienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\NotaIngresoForm.resx">
+      <DependentUpon>NotaIngresoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NotaVentaForm.resx">
+      <DependentUpon>NotaVentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NuevoProductoForm.resx">
+      <DependentUpon>NuevoProductoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ProductosForm.resx">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ProveedoresCoincidentesDialogForm.resx">
+      <DependentUpon>ProveedoresCoincidentesDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SeleccionarProductoForm.resx">
+      <DependentUpon>SeleccionarProductoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TotalesPanel.resx">
+      <DependentUpon>TotalesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\tiendaSystem.models.NotaIngresoHistorial.datasource" />
+    <None Include="Properties\DataSources\tiendaSystem.models.Producto.datasource" />
+    <None Include="Properties\DataSources\tiendaSystem.models.Proveedor.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
