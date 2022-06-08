@@ -16,6 +16,10 @@ namespace tiendaSystem.models {
         private String direccion;
 
 
+        public Proveedor()
+        {
+
+        }
 
         public Proveedor(int id, string ruc, string razonSocial, string direccion) {
             this.id = id;
@@ -24,7 +28,27 @@ namespace tiendaSystem.models {
             this.direccion = direccion;
         }
 
-        public string Ruc { get => ruc; set => ruc = value; }
-        public string RazonSocial { get => razonSocial; set => razonSocial = value; }
+        public string Ruc
+        {
+            get => ruc;
+            set
+            {
+                if(value.Length != 11)
+                {
+                    throw new ArgumentOutOfRangeException("El ruc debe tener 11 caracteres");
+                }
+                this.ruc = value;
+            }
+        }
+        public string RazonSocial { get => razonSocial;
+            set 
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("La Razon Social no puede ser vacía");
+                }
+                this.razonSocial = value;
+            }
+        }
     }
 }

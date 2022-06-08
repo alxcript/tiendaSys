@@ -26,6 +26,10 @@ namespace tiendaSystem.controllers {
 
         public bool agregarItemNuevaVenta(int idProducto, double cantidad) {
             Producto producto = this.stockProductos.Find(p => p.Id == idProducto);
+            if(producto == null)
+            {
+                throw new KeyNotFoundException($"No existe el producto con el id {idProducto}");
+            }
             NotaVentaDetalle notaVentaDetalle = new NotaVentaDetalle(producto, cantidad, producto.PrecioVenta);
             bool ok = this.nuevaNotaVenta.agregarItem(notaVentaDetalle);
             return ok;
@@ -36,6 +40,10 @@ namespace tiendaSystem.controllers {
         }
 
         public void quitarItemNuevaVenta(int idProducto) {
+            if (!this.nuevaNotaVenta.existsOnList(idProducto))
+            {
+                throw new KeyNotFoundException($"No existe el producto de id {idProducto} en la lista");
+            }
             this.nuevaNotaVenta.quitarItem(idProducto);
         }
 

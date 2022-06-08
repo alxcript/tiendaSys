@@ -13,7 +13,6 @@ namespace tiendaSystem.controllers {
 
         private Conexion() {
             
-            
         }
 
         public MySqlConnection getConnection() {
@@ -34,5 +33,5 @@ namespace tiendaSystem.controllers {
             return cnx;
         }
     
-}
+    }
 }

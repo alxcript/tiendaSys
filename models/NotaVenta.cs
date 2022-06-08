@@ -52,6 +52,11 @@ namespace tiendaSystem.models {
             this.NotaVentaDetalle.Remove(nvd);
         }
 
+        public bool existsOnList(int id)
+        {
+            return this.NotaVentaDetalle.Find((detalle) => detalle.Producto.Id == id) != null;
+        }
+
         public void cambiarPrecioVentaUnitario(int idProducto, double precioVenta) {
             NotaVentaDetalle nvd = this.NotaVentaDetalle.Find(detalle => detalle.Producto.Id == idProducto);
             nvd.PrecioUnitario = precioVenta;

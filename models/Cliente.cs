@@ -11,7 +11,17 @@ namespace tiendaSystem.models {
 
         public string DniRuc { get; set; }
 
-        public string Nombre { get; set; }
+        private string _nombre;
+        public string Nombre { get => this._nombre; 
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("El nombre ingresado es inválido");
+                }
+                this._nombre = value;
+            }
+        }
 
         public string Direccion { get; set; }
 

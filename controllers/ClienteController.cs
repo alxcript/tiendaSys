@@ -17,6 +17,10 @@ namespace tiendaSystem.controllers {
         }
 
         public List<Cliente> getClientePorRucDni(string rucDni) {
+            if(rucDni.Length > 11)
+            {
+                throw new ArgumentOutOfRangeException("El ruc debe ser de 11 caracteres");
+            }
             return this.clientes.FindAll(cliente => cliente.DniRuc.StartsWith(rucDni));
         }
 

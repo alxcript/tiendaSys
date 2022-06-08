@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="tiendaSystem.controllers.ClienteController" Collapsed="true">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>controllers\ClienteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.Conexion">
+    <Position X="9.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EACAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>controllers\Conexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.MySqlCommandHelper">
+    <Position X="12" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>controllers\MySqlCommandHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.NotaIngresoController" Collapsed="true">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAIAABAAAAAQEAggABAAAAABwAAKAAAAAA=</HashCode>
+      <FileName>controllers\NotaIngresoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.NotaVentaController" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACxAAAEAYAAAAAIAAAAAACAAAAAAAgAAAAgAAAAIAAA=</HashCode>
+      <FileName>controllers\NotaVentaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.NumeracionComprobanteController">
+    <Position X="11.75" Y="5.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>controllers\NumeracionComprobanteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.ProductosController" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAQAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>controllers\ProductosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.controllers.ProveedorController">
+    <Position X="9.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>controllers\ProveedorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.models.Cliente">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAACIAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.models.EntityValidator" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAACAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\EntityValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="tiendaSystem.models.NotaIngresoDetalleHistorial">
+    <Position X="6.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAASEAAAAAAAAAAAAAAgAAAAAAwRAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\NotaIngresoDetalleHistorial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.models.NotaIngresoHistorial">
+    <Position X="3" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAAAAAEAAAAADABEAAARAAIAAAAAAABAAE=</HashCode>
+      <FileName>models\NotaIngresoHistorial.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Proveedor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DetalleHistorial" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="tiendaSystem.models.NotaVenta">
+    <Position X="0.5" Y="1.75" Width="2.25" />
+    <InheritanceLine Type="tiendaSystem.models.EntityValidator" ManuallyRouted="true">
+      <Path>
+        <Point X="3.5" Y="1.062" />
+        <Point X="3.5" Y="1.338" />
+        <Point X="1.625" Y="1.338" />
+        <Point X="1.625" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Cliente" Type="tiendaSystem.models.Cliente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.219" Y="1.75" />
+        <Point X="2.219" Y="1.338" />
+        <Point X="0.125" Y="1.338" />
+        <Point X="0.125" Y="5.375" />
+        <Point X="1.188" Y="5.375" />
+        <Point X="1.188" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAICAgAAAABAAAFAAACAACAIAAAAQAAAAAAAAAAAACA=</HashCode>
+      <FileName>models\NotaVenta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NumeracionComprobante" />
+      <Property Name="Cliente" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="NotaVentaDetalle" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="tiendaSystem.models.NotaVentaDetalle">
+    <Position X="0.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQEAAAAAAAAAQAAAAAAAAAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\NotaVentaDetalle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Producto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="tiendaSystem.models.NumeracionComprobante">
+    <Position X="2.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAABAAE=</HashCode>
+      <FileName>models\NumeracionComprobante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.models.Producto">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="tiendaSystem.models.EntityValidator" ManuallyRouted="true">
+      <Path>
+        <Point X="3.5" Y="1.062" />
+        <Point X="3.5" Y="1.261" />
+        <Point X="6" Y="1.261" />
+        <Point X="6" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAQAAAkgACAAgAFgAAAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>models\Producto.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="tiendaSystem.models.Proveedor">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIACAgCAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>models\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.Program">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.Properties.Resources" Collapsed="true">
+    <Position X="14.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.Properties.Settings" Collapsed="true">
+    <Position X="16.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.ClientesCoincidentesDialogForm" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAUCAAAJgABACAAAACAABAAgAAACAAgQgAAAA=</HashCode>
+      <FileName>views\ClientesCoincidentesDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.ComprobanteVentaAbstractoPanel" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACACBAAACAAAJIABADACAACACUAAQAAACBgQYgQAiA=</HashCode>
+      <FileName>views\ComprobanteVentaAbstractoPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.ComprobanteVentaForm" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACBAAQCAAAJoABADACAACACFAAQAAACAgQYgQAiA=</HashCode>
+      <FileName>views\ComprobanteVentaForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.InformacionProductoPanel" Collapsed="true">
+    <Position X="14.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACAAAgCAARAAQAACAEIQCAAIQAAAAABCQBCAAAGA=</HashCode>
+      <FileName>views\InformacionProductoPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.MDITienda" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>RJGgCj0AhCEAEAAACiK+wIfCDABAAEgBCEwAQwAAQAc=</HashCode>
+      <FileName>views\MDITienda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.NotaIngresoForm" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAOKRoAADCgBJAAAAjAACiCCgJAAEAAEvgAAxAYICA=</HashCode>
+      <FileName>views\NotaIngresoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.NotaVentaForm" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAgwQDCAAhQAOFGMAwAqCgDAhAAEACMgAwCRoCA=</HashCode>
+      <FileName>views\NotaVentaForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.NuevoProductoForm" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACBAAIAAAACAAAACAABAEAAAABAAAQAAAAI=</HashCode>
+      <FileName>views\NuevoProductoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.ProductosForm" Collapsed="true">
+    <Position X="16.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCSIGAwAgDBIAqKBAACUBAACAABAEEAAABAAAAAAAQQ=</HashCode>
+      <FileName>views\ProductosForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.ProveedoresCoincidentesDialogForm" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAJAAACCAAEACIAAAAAAAACAAAUAAAAA=</HashCode>
+      <FileName>views\ProveedoresCoincidentesDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.SeleccionarProductoForm" Collapsed="true">
+    <Position X="13" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCACCAiAASBAAJgQBCiAAAACRAhAAECAAAIAAAABIAA=</HashCode>
+      <FileName>views\SeleccionarProductoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tiendaSystem.views.TotalesPanel" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAABAAAACAAAACAAQAAAAAAAAABAAAACQ=</HashCode>
+      <FileName>views\TotalesPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

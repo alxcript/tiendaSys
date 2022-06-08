@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using tiendaSystem.models;
 
 namespace tiendaSystem.controllers {
-    class ProveedorController {
+    public class ProveedorController {
 
         public DataTable getProveedoresPorRuc(string rucBuscado) {
             DataTable proveedoresCoincidentes = new DataTable();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using tiendaSystem.models;
 
 namespace tiendaSystem.controllers {
-    class ProductosController {
+    public class ProductosController {
         
         public List<Producto> getProductosPorDescripcion(string descripcionBuscada) {
             List<Producto> productosEncontrados = new List<Producto>();

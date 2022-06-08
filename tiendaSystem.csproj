@@ -187,6 +187,7 @@
     <EmbeddedResource Include="views\TotalesPanel.resx">
       <DependentUpon>TotalesPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\tiendaSystem.models.NotaIngresoHistorial.datasource" />
     <None Include="Properties\DataSources\tiendaSystem.models.Producto.datasource" />
     <None Include="Properties\DataSources\tiendaSystem.models.Proveedor.datasource" />
