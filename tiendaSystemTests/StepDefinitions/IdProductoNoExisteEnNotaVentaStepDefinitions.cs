@@ -10,37 +10,37 @@ namespace tiendaSystemTests.StepDefinitions
     [Binding]
     public class IdProductoNoExisteEnNotaVentaStepDefinitions
     {
-        private NotaVentaController notaVentaController;
-        private KeyNotFoundException keyNotFoundException;
+        //private NotaVentaController notaVentaController;
+        //private KeyNotFoundException keyNotFoundException;
 
-        [Given(@"una lista de productos con ids")]
-        public void GivenUnaListaDeProductosConIds(Table table)
-        {
-            this.notaVentaController = new NotaVentaController();
-            foreach(dynamic data in table.CreateDynamicSet())
-            {
-                this.notaVentaController.agregarItemNuevaVenta(data.Id, 5);
-            }
-        }
+        //[Given(@"una lista de productos con ids")]
+        //public void GivenUnaListaDeProductosConIds(Table table)
+        //{
+        //    this.notaVentaController = new NotaVentaController();
+        //    foreach(dynamic data in table.CreateDynamicSet())
+        //    {
+        //        this.notaVentaController.agregarItemNuevaVenta(data.Id, 5);
+        //    }
+        //}
 
-        [When(@"Se quiere quitar el id (.*)")]
-        public void WhenSeQuiereQuitarElId(int id)
-        {
-            try
-            {
-                this.notaVentaController.quitarItemNuevaVenta(id);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                this.keyNotFoundException = ex;
-            }
-        }
+        //[When(@"Se quiere quitar el id (.*)")]
+        //public void WhenSeQuiereQuitarElId(int id)
+        //{
+        //    try
+        //    {
+        //        this.notaVentaController.quitarItemNuevaVenta(id);
+        //    }
+        //    catch (KeyNotFoundException ex)
+        //    {
+        //        this.keyNotFoundException = ex;
+        //    }
+        //}
 
-        [Then(@"Se deberia de mostrar el mensaje ""([^""]*)""")]
-        public void ThenSeDeberiaDeMostrarElMensaje(string mensaje)
-        {
-            StringAssert.Contains(mensaje, this.keyNotFoundException.Message);
-        }
+        //[Then(@"Se deberia de mostrar el mensaje ""([^""]*)""")]
+        //public void ThenSeDeberiaDeMostrarElMensaje(string mensaje)
+        //{
+        //    StringAssert.Contains(mensaje, this.keyNotFoundException.Message);
+        //}
 
     }
 }
